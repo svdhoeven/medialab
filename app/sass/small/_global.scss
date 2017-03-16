@@ -1,0 +1,21 @@
+//Reset all padding and margins from every element
+*{
+  margin: 0;
+  padding: 0;
+}
+
+//Ensure all inputs don't use the default font size
+input, textarea, select, button{
+  font-size: $fontSizeSmall;
+}
+
+html{
+  overflow: scroll;
+  overflow-x: hidden;
+  min-height: 100%;
+
+  body{
+    background: grey;
+    font-size: $fontSizeSmall;
+  }
+}

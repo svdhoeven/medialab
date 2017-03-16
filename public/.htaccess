@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-F
+    RewriteRule ^([a-z_]+)-([a-z_]+)$ index.php?controller=$1&view=$2 [QSA,L]
+    RewriteRule ^([a-z_]+)$ index.php?controller=$1 [QSA,L]
+</IfModule>
