@@ -13,6 +13,7 @@ include_once('../web/routing/router.php');
   <title></title>
 </head>
 <body>
+lalalalala
   <?php
   //Include the body, where all content and view specific structure will be included
   include_once('../web/structure/body.php');
