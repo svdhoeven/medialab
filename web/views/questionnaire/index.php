@@ -3,19 +3,22 @@
 </div>
 
 <div class="questionnaire-question_wrapper">
+    <div class="questionnaire-pagination question-<?=$currentQuestion?>">
+        <div class="questionnaire-pagination_value"><?=$currentQuestion?>/10</div>
+    </div>
 
-    <form class="questionnaire-question_form" method="post">
+    <form class="questionnaire-question_form" method="post" action="questionnaire-submit" novalidate>
 
         <label class="questionnaire-question">
-            <span class="questionnaire-question_label">1. Heeft u behoefte aan... ?</span>
+            <span class="questionnaire-question_label"><?=$currentQuestion?>. Heeft u behoefte aan... ?</span>
 
-            <span class="questionnaire-question_value">Meer groen in de wijk zoals bomen, parkjes en bloemen.</span>
+            <span class="questionnaire-question_value"><?= isset($currentQuestion) && isset($questions[$currentQuestion]) ? $questions[$currentQuestion] : 'Interne fout'?></span>
         </label>
 
         <div class="questionnaire-answers">
 
             <div class="questionnaire-radio_wrapper">
-                <input id="questionnaire-radio-agree" type="radio" name="answer" value="3"/>
+                <input id="questionnaire-radio-agree" type="radio" name="answer" value="3" required/>
 
                 <label for="questionnaire-radio-agree" class="agree">
                     Eens
@@ -40,7 +43,7 @@
 
         </div>
 
-        <input type="number" name="number" hidden value="1"/>
+        <input type="number" name="number" hidden value="<?= isset($currentQuestion) ? $currentQuestion : 1 ?>"/>
 
         <input type="submit" value=">" name="submit" class="questionnaire-submit"/>
     </form>
