@@ -12,7 +12,7 @@ include_once('../web/routing/router.php');
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="./bundles/final.css" type="text/css"/>
-  <title></title>
+  <title><?= isset($pageData) && isset($pageData['title']) ? $pageData['title'] : 'Buurtwijzer'?></title>
 </head>
 <body>
   <?php

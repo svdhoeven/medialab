@@ -1,1 +1,0 @@
-<h1 id="frikandel">Welkom</h1>

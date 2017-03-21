@@ -4,6 +4,9 @@ if(isset($_GET['view'])) {
 
     //Set view parameters if the specified view exists
     switch(htmlspecialchars($_GET['view'])){
+        /**
+         * Submit page
+         */
         case 'submit':
             //Get current question session
             if(isset($_SESSION['currentQuestion'])){
@@ -47,15 +50,10 @@ if(isset($_GET['view'])) {
             header('Location: questionnaire'); die;
             break;
 
+        /**
+         * Thank you page
+         */
         case 'thank_you':
-            //Redirect back to questionnaire if no answers
-            if(isset($_SESSION['answers'])){
-                $answers = $_SESSION['answers'];
-            }
-            else{
-                header('Location: questionnaire'); die;
-            }
-
             $pageData = [
                 'title' => 'Bedankt voor uw deelname',
                 'view' => 'questionnaire/thank_you',
@@ -64,7 +62,9 @@ if(isset($_GET['view'])) {
             break;
     }
 }
-//Default page if no specific view was requested
+/**
+ * Default page, index
+ */
 else{
     $questions = [
         1 => 'Meer groen in de wijk zoals bomen, parkjes en bloemen?',

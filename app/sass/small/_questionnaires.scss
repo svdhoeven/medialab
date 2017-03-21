@@ -35,6 +35,14 @@
     text-align: center;
     color: $green;
   }
+
+  &.thank_you-page{
+
+    h1{
+      width: 700px;
+      top: 500px;
+    }
+  }
 }
 
 .questionnaire-question_wrapper{
@@ -158,6 +166,16 @@
         width: 90%;
       }
     }
+
+    &.done{
+      .questionnaire-pagination_value{
+        text-align: right;
+      }
+
+      &::before{
+        width: 100%;
+      }
+    }
   }
 
   .questionnaire-question_form{
@@ -228,29 +246,29 @@
           border: 1px solid rgba(0, 0, 0, 0);
 
           &.agree{
-            background: #006738;
+            background: $green2;
           }
 
           &.neutral{
-            background: #F1Ae42;
+            background: $yellow;
           }
 
           &.disagree{
-            background: #DA534B;
+            background: $red;
           }
 
           &:hover{
 
             &.agree{
-              background: #00512c;
+              background: $green2Dark;
             }
 
             &.neutral{
-              background: #d79b3b;
+              background: $yellowDark;
             }
 
             &.disagree{
-              background: #b0433d;
+              background: $redDark;
             }
           }
         }
@@ -261,13 +279,13 @@
       position: absolute;
       top: 50%;
       right: 0;
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(1);
       font-size: 30px;
       padding-left: 3px;
       border: none;
       border-radius: 50%;
       background: white;
-      color: grey;
+      color: #b6b6b6;
       height: 50px;
       width: 50px;
       line-height: 0;
@@ -278,7 +296,59 @@
 
       &:hover{
         background: #d7d7d7;
-        color: #686868;
+        color: grey;
+        transform: translateY(-50%) scale(1.2);
+      }
+    }
+  }
+
+  .questionnaire-sign-up{
+    padding: 80px 50px;
+    width: 800px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    h2{
+      width: 100%;
+      text-align: center;
+      padding-bottom: 50px;
+      font-size: 2em;
+    }
+
+    .button{
+      padding: 10px 50px;
+      font-size: 1.5em;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+      color: white;
+      text-decoration: none;
+
+      &:hover{
+        color: #e5e5e5;
+      }
+
+      &:visited{
+        color: white;
+      }
+
+      &.red{
+        background: $red;
+
+        &:hover{
+          background: $redDark;
+        }
+      }
+
+      &.yellow{
+        background: $yellow;
+
+        &:hover{
+          background: $yellowDark;
+        }
       }
     }
   }
