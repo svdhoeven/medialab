@@ -1,0 +1,22 @@
+.sign-up-form{
+  width: 400px;
+  margin: 200px auto;
+  font-size: 1.5em;
+
+  .input_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    input{
+      padding: 5px;
+    }
+  }
+
+  .submit{
+    width: 100%;
+    border: none;
+    padding: 10px;
+  }
+}

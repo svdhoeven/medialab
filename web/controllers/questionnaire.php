@@ -5,7 +5,7 @@ if(isset($_GET['view'])) {
     //Set view parameters if the specified view exists
     switch(htmlspecialchars($_GET['view'])){
         /**
-         * Submit page
+         * Submit pagew
          */
         case 'submit':
             //Get current question session

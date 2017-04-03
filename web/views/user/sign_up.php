@@ -1,4 +1,4 @@
-<form method="post" action="">
+<form method="post" action="" class="sign-up-form">
     <div class="input_wrapper">
         <label for="firstName">
             Voornaam
