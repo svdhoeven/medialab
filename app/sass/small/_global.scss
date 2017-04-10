@@ -19,6 +19,11 @@ html{
     height: 100%;
     font-size: $fontSizeSmall;
     font-family: 'Roboto', Arial, sans-serif;
+    transform: rotate(360deg);
+
+    &.dashboard, &.plans{
+      background: rgb(249, 250, 252);
+    }
   }
 }
 

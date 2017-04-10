@@ -41,7 +41,7 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)$/,
                 exclude: /node_modules/,
                 include: path.join(projectPath, 'public/img'),
-                loaders: 'file-loader'
+                loader: 'file-loader'
             }
         ]
     },

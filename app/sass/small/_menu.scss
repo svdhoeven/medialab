@@ -1,0 +1,77 @@
+.menu{
+  position: fixed;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  .logo{
+
+    a{
+      display: block;
+
+      img{
+        width: 230px;
+        margin: 0 30px;
+      }
+    }
+  }
+
+  .user{
+    margin: 30px;
+
+    img{
+      width: 230px;
+    }
+
+    figcaption{
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  ul{
+    list-style-type: none;
+
+    li{
+
+      a{
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        background: white;
+        transition: all 0.5s linear;
+        color: $grey;
+        text-decoration: none;
+        font-weight: 700;
+
+        img{
+          width: 20px;
+        }
+
+        .icon-overlay{
+          position: relative;
+          margin-left: -20px;
+          margin-right: 10px;
+          opacity: 1;
+          transition: all 0.5s ease;
+        }
+
+        &.current, &:hover{
+          background: $green2;
+          color: white;
+
+          .icon-overlay{
+            opacity: 0;
+          }
+        }
+
+        &.current{
+          cursor: default;
+        }
+      }
+    }
+  }
+}

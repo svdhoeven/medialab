@@ -14,7 +14,7 @@ include_once('../web/routing/router.php');
   <link rel="stylesheet" href="./bundles/final.css" type="text/css"/>
   <title><?= isset($pageData) && isset($pageData['title']) ? $pageData['title'] : 'Buurtwijzer'?></title>
 </head>
-<body>
+<body class="<?= $controller ?>">
   <?php
   //Include the body, where all content and view specific structure will be included
   include_once('../web/structure/body.php');
